@@ -1,4 +1,4 @@
-package com.accelerator.spring.automationaccelerator.mouri.config;
+package com.accelerator.spring.automationaccelerator.mouri.scope;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;

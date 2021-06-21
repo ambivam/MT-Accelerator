@@ -1,4 +1,4 @@
-package com.accelerator.spring.automationaccelerator.mouri.config;
+package com.accelerator.spring.automationaccelerator.mouri.scope;
 
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.context.annotation.Bean;
