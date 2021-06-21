@@ -1,4 +1,4 @@
-package com.accelerator.spring.automationaccelerator.mouri.util;
+package com.accelerator.spring.automationaccelerator.mouri.service;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.OutputType;
@@ -16,7 +16,7 @@ import java.nio.file.Path;
 
 @Lazy
 @Component
-public class ScreenShotUtil {
+public class ScreenshotService {
 
     @Autowired
     private ApplicationContext ctx;

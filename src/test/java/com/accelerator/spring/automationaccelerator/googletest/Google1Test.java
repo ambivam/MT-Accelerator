@@ -2,7 +2,7 @@ package com.accelerator.spring.automationaccelerator.googletest;
 
 import com.accelerator.spring.automationaccelerator.SpringBaseTestNGTest;
 import com.accelerator.spring.automationaccelerator.page.google.GooglePage;
-import com.accelerator.spring.automationaccelerator.mouri.util.ScreenShotUtil;
+import com.accelerator.spring.automationaccelerator.mouri.service.ScreenshotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.testng.Assert;
@@ -17,7 +17,7 @@ public class Google1Test extends SpringBaseTestNGTest {
 
     @Lazy
     @Autowired
-    private ScreenShotUtil screenShotUtil;
+    private ScreenshotService screenshotService;
 
 
     @Test
@@ -29,9 +29,9 @@ public class Google1Test extends SpringBaseTestNGTest {
         this.googlePage.getSearchComponent().search("spring boot");
         Assert.assertTrue(this.googlePage.getSearchResult().isAt());
         Assert.assertTrue(this.googlePage.getSearchResult().getCount() > 2);
-        this.screenShotUtil.takeScreenShot();
+        this.screenshotService.takeScreenShot();
         this.googlePage.close();
-        //this.screenShotUtil.takeScreenShot("temp.png");
+        //this.screenshotService.takeScreenShot("temp.png");
 
     }
 
