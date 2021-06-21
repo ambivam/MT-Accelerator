@@ -12,7 +12,6 @@ import java.io.IOException;
 
 public class Google1Test extends SpringBaseTestNGTest {
 
-    @Lazy
     @Autowired
     private GooglePage googlePage;
 
