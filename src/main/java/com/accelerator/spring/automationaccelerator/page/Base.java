@@ -1,10 +1,9 @@
-package com.accelerator.spring.automationaccelerator.config.page;
+package com.accelerator.spring.automationaccelerator.page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 
 import javax.annotation.PostConstruct;
 

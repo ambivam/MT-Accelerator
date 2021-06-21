@@ -1,13 +1,10 @@
-package com.accelerator.spring.automationaccelerator.config.page.google;
+package com.accelerator.spring.automationaccelerator.page.google;
 
 import com.accelerator.spring.automationaccelerator.annotations.PageFragment;
-import com.accelerator.spring.automationaccelerator.config.page.Base;
+import com.accelerator.spring.automationaccelerator.page.Base;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 

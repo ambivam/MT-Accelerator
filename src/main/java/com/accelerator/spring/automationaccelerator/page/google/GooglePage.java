@@ -1,12 +1,9 @@
-package com.accelerator.spring.automationaccelerator.config.page.google;
+package com.accelerator.spring.automationaccelerator.page.google;
 
 import com.accelerator.spring.automationaccelerator.annotations.Page;
-import com.accelerator.spring.automationaccelerator.config.page.Base;
+import com.accelerator.spring.automationaccelerator.page.Base;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 @Page
 public class GooglePage extends Base {
