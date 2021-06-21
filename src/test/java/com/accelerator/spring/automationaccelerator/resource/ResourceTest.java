@@ -1,6 +1,8 @@
 package com.accelerator.spring.automationaccelerator.resource;
 
+
 import com.accelerator.spring.automationaccelerator.SpringBaseTestNGTest;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.testng.annotations.Test;
@@ -12,6 +14,8 @@ public class ResourceTest extends SpringBaseTestNGTest {
 
     @Value("classpath:data/testdata.csv")
     private Resource resource;
+
+
 
     @Value("file:D:\\MT-Accelerator\\src\\test\\resources\\data\\testdata.csv")
     private Resource resourceExternal;
@@ -27,5 +31,7 @@ public class ResourceTest extends SpringBaseTestNGTest {
     public void resourceExternalFileTest() throws IOException {
         Files.readAllLines(resourceExternal.getFile().toPath()).forEach(System.out::println);
     }
+
+
 
 }
