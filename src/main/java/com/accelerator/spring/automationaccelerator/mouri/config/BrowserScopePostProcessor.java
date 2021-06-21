@@ -1,4 +1,4 @@
-package com.accelerator.spring.automationaccelerator.config;
+package com.accelerator.spring.automationaccelerator.mouri.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;

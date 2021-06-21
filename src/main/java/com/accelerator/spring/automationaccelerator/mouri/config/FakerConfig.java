@@ -1,9 +1,8 @@
-package com.accelerator.spring.automationaccelerator.config;
+package com.accelerator.spring.automationaccelerator.mouri.config;
 
-import com.accelerator.spring.automationaccelerator.annotations.LazyConfiguration;
+import com.accelerator.spring.automationaccelerator.mouri.annotations.LazyConfiguration;
 import com.github.javafaker.Faker;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 @LazyConfiguration
 public class FakerConfig {

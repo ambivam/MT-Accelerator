@@ -1,15 +1,12 @@
-package com.accelerator.spring.automationaccelerator.config;
+package com.accelerator.spring.automationaccelerator.mouri.config;
 
-import com.accelerator.spring.automationaccelerator.annotations.LazyConfiguration;
-import com.accelerator.spring.automationaccelerator.annotations.ThreadScopeBean;
+import com.accelerator.spring.automationaccelerator.mouri.annotations.LazyConfiguration;
+import com.accelerator.spring.automationaccelerator.mouri.annotations.ThreadScopeBean;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.*;

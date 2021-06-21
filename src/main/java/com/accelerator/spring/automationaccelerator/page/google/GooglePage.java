@@ -1,6 +1,6 @@
 package com.accelerator.spring.automationaccelerator.page.google;
 
-import com.accelerator.spring.automationaccelerator.annotations.Page;
+import com.accelerator.spring.automationaccelerator.mouri.annotations.Page;
 import com.accelerator.spring.automationaccelerator.page.Base;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

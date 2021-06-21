@@ -1,9 +1,8 @@
-package com.accelerator.spring.automationaccelerator.config;
+package com.accelerator.spring.automationaccelerator.mouri.config;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 import org.springframework.beans.factory.ObjectFactory;
-import org.springframework.beans.factory.config.Scope;
 import org.springframework.context.support.SimpleThreadScope;
 
 import java.util.Objects;

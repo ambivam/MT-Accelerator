@@ -2,7 +2,7 @@ package com.accelerator.spring.automationaccelerator.googletest;
 
 import com.accelerator.spring.automationaccelerator.SpringBaseTestNGTest;
 import com.accelerator.spring.automationaccelerator.page.google.GooglePage;
-import com.accelerator.spring.automationaccelerator.util.ScreenShotUtil;
+import com.accelerator.spring.automationaccelerator.mouri.util.ScreenShotUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.testng.Assert;

@@ -1,9 +1,8 @@
-package com.accelerator.spring.automationaccelerator.util;
+package com.accelerator.spring.automationaccelerator.mouri.util;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;

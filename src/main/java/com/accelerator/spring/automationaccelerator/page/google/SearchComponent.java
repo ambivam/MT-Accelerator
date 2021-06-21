@@ -1,6 +1,6 @@
 package com.accelerator.spring.automationaccelerator.page.google;
 
-import com.accelerator.spring.automationaccelerator.annotations.PageFragment;
+import com.accelerator.spring.automationaccelerator.mouri.annotations.PageFragment;
 import com.accelerator.spring.automationaccelerator.page.Base;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
