@@ -19,21 +19,21 @@ import org.springframework.context.annotation.*;
 public class WebDriverConfig {
 
     @Bean
-    @ConditionalOnProperty(name="browser",havingValue = "chrome")
+    //@ConditionalOnProperty(name="browser",havingValue = "chrome")
     public WebDriver chromeDriver(){
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
     }
 
     @Bean
-    @ConditionalOnProperty(name="browser",havingValue = "firefox")
+    //@ConditionalOnProperty(name="browser",havingValue = "firefox")
     public WebDriver firefoxDriver(){
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
     }
 
     @Bean
-    @ConditionalOnProperty(name="browser",havingValue = "ie")
+    //@ConditionalOnProperty(name="browser",havingValue = "ie")
     public WebDriver ieDriver(){
         WebDriverManager.iedriver().setup();
         return new InternetExplorerDriver();
@@ -41,7 +41,7 @@ public class WebDriverConfig {
 
     @Bean
     @Scope("browserscope")
-    @ConditionalOnMissingBean
+    //@ConditionalOnMissingBean
     public WebDriver safariDriver(){
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
