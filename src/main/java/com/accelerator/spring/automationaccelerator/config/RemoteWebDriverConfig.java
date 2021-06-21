@@ -1,6 +1,7 @@
 package com.accelerator.spring.automationaccelerator.config;
 
 import com.accelerator.spring.automationaccelerator.annotations.LazyConfiguration;
+import com.accelerator.spring.automationaccelerator.annotations.ThreadScopeBean;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -25,19 +26,19 @@ public class RemoteWebDriverConfig {
     @Value("${default.timeout:30}")
     private int timeout;
 
-    @Bean
+    @ThreadScopeBean
     @ConditionalOnProperty(name="browser",havingValue="firefox")
     public WebDriver remoteFirefoxDriver(){
         return new RemoteWebDriver(this.url, DesiredCapabilities.firefox());
     }
 
-    @Bean
+    @ThreadScopeBean
     @ConditionalOnProperty(name="browser",havingValue="chrome")
     public WebDriver remoteChromeDriver(){
         return new RemoteWebDriver(this.url, DesiredCapabilities.chrome());
     }
 
-    @Bean
+    @ThreadScopeBean
     @ConditionalOnMissingBean
     public WebDriver remoteDriver(){
         return new RemoteWebDriver(this.url, DesiredCapabilities.chrome());
