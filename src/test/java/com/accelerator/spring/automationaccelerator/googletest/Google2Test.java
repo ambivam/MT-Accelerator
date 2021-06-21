@@ -1,6 +1,7 @@
 package com.accelerator.spring.automationaccelerator.googletest;
 
 import com.accelerator.spring.automationaccelerator.SpringBaseTestNGTest;
+import com.accelerator.spring.automationaccelerator.mouri.annotations.LazyAutowired;
 import com.accelerator.spring.automationaccelerator.page.google.GooglePage;
 import com.accelerator.spring.automationaccelerator.mouri.service.ScreenshotService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +13,10 @@ import java.io.IOException;
 
 public class Google2Test extends SpringBaseTestNGTest {
 
-    @Autowired
+    @LazyAutowired
     private GooglePage googlePage;
 
-    @Lazy
-    @Autowired
+    @LazyAutowired
     private ScreenshotService screenshotService;
 
 
