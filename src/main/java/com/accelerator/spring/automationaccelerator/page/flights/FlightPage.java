@@ -19,12 +19,13 @@ public class FlightPage extends Base {
     }
 
     public List<String> getlabels(){
-        this.elements
+        return this.elements
                 .stream()
                 .map(WebElement::getText)
                 .map(String::trim)
                 .collect(Collectors.toList());
     }
+
     @Override
     public boolean isAt() {
         return this.wait.until((d) -> !this.elements.isEmpty());
