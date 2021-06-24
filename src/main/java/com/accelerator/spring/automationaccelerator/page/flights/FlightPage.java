@@ -1,6 +1,7 @@
 package com.accelerator.spring.automationaccelerator.page.flights;
 
 import com.accelerator.spring.automationaccelerator.mouri.annotations.Page;
+import com.accelerator.spring.automationaccelerator.mouri.annotations.TakeScreenshot;
 import com.accelerator.spring.automationaccelerator.page.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +20,7 @@ public class FlightPage extends Base {
         this.driver.manage().window().maximize();
     }
 
+    @TakeScreenshot
     public List<String> getlabels(){
         return this.elements
                 .stream()
