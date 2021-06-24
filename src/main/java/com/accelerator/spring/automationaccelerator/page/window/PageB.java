@@ -1,11 +1,12 @@
 package com.accelerator.spring.automationaccelerator.page.window;
 
 import com.accelerator.spring.automationaccelerator.mouri.annotations.Page;
+import com.accelerator.spring.automationaccelerator.mouri.annotations.Window;
 import com.accelerator.spring.automationaccelerator.page.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-@Page
+@Window("Page B")
 public class PageB extends Base {
 
     @FindBy(id = "area")
