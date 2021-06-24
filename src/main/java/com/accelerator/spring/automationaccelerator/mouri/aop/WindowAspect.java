@@ -14,9 +14,6 @@ import org.springframework.stereotype.Component;
 public class WindowAspect {
 
     @Autowired
-    private ApplicationContext ctx;
-
-    @Autowired
     private WindowSwitchService switchService;
 
     @Before("@target(window) && within(com.accelerator.spring.automationaccelerator..*)")

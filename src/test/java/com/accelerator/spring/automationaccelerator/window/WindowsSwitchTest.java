@@ -5,9 +5,11 @@ import com.accelerator.spring.automationaccelerator.mouri.service.WindowSwitchSe
 import com.accelerator.spring.automationaccelerator.page.window.MainPage;
 import com.accelerator.spring.automationaccelerator.page.window.PageA;
 import com.accelerator.spring.automationaccelerator.page.window.PageB;
+import com.accelerator.spring.automationaccelerator.page.window.PageC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.TestPropertySource;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 @TestPropertySource(properties="browser=chrome")
@@ -22,6 +24,9 @@ public class WindowsSwitchTest extends SpringBaseTestNGTest {
     private PageB pageB;
 
     @Autowired
+    private PageC pageC;
+
+    @Autowired
     private WindowSwitchService switchService;
 
     @BeforeClass
@@ -31,12 +36,31 @@ public class WindowsSwitchTest extends SpringBaseTestNGTest {
         this.mainPage.launchAllWindows();
     }
 
-    @Test
-    public void switchTest() throws Throwable {
-        this.switchService.switchByTitle("Page A");
+    @Test(dataProvider = "getData")
+    public void switchTest(int index)  {
+        /*this.switchService.switchByTitle("Page A");
         this.pageA.addToArea("hi Page A");
         this.switchService.switchByIndex(2);
-        this.pageB.addToArea("hello page B");
+        this.pageB.addToArea("hello page B");*/
+
+        this.pageA.addToArea(index + "\n");
+        this.pageB.addToArea((index*2) + "\n");
+        this.pageC.addToArea((index*3) + "\n");
     }
 
+    @DataProvider
+    public Object[] getData(){
+        return new Object[]{
+                3,
+                4,
+                1,
+                5,
+                6,
+                2
+        };
+
+        }
+
 }
+
+
