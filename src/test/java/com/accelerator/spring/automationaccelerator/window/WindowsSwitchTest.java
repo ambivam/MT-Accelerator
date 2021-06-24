@@ -32,11 +32,11 @@ public class WindowsSwitchTest extends SpringBaseTestNGTest {
     }
 
     @Test
-    public void switchTest(){
+    public void switchTest() throws Throwable {
         this.switchService.switchByTitle("Page A");
         this.pageA.addToArea("hi Page A");
         this.switchService.switchByIndex(2);
-        this.pageA.addToArea("hello page B");
+        this.pageB.addToArea("hello page B");
     }
 
 }

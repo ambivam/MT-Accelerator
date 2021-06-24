@@ -11,7 +11,7 @@ public class WindowSwitchService {
     @Autowired
     private ApplicationContext ctx;
 
-    public void switchByTitle(final String title){
+    public void switchByTitle(final String title) throws Throwable{
       WebDriver driver = this.ctx.getBean(WebDriver.class);
       driver.getWindowHandles()
               .stream()
