@@ -1,12 +1,17 @@
 package com.accelerator.spring.automationaccelerator.entity;
 
-import org.springframework.data.annotation.Id;
+//import org.springframework.data.annotation.Id;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
 import java.util.Date;
 
+
+
 @Entity
+//@Table(name = "user")
 public class User {
 
     @Id
