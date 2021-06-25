@@ -7,6 +7,7 @@ import com.accelerator.spring.automationaccelerator.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
+import java.sql.Date;
 import java.time.ZoneId;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,7 +22,7 @@ public class UserVisaTest extends SpringBaseTestNGTest {
 
     @Test
     public void VisaTest(){
-        List<User> users =  this.repository.findByFirstNameStartingWith("Mi")
+        List<User> users =  this.repository.findByDobBetween(Date.valueOf("1995-01-01"),Date.valueOf("1999-01-01"))
                 .stream()
                 .limit(3)
                 .collect(Collectors.toList());
