@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Page
 public class VisaRegistrationPage extends Base {
@@ -29,7 +30,7 @@ public class VisaRegistrationPage extends Base {
     @FindBy(id="input_24_day")
     private WebElement day;
 
-    @FindBy(id="input_24_day")
+    @FindBy(id="input_24_year")
     private WebElement year;
 
     @FindBy(id="input_6")
@@ -67,13 +68,13 @@ public class VisaRegistrationPage extends Base {
         new Select(this.month).selectByValue(String.valueOf(localDate.getMonth().toString()));
     }
 
-    public void SetContactDetails(String email,String phone){
+    public void setContactDetails(String email,String phone){
         this.email.sendKeys(email);
         this.phone.sendKeys(phone);
     }
 
     public void setComments(String comments){
-        this.comments.sendKeys(comments);
+        this.comments.sendKeys(Objects.toString(comments,""));
     }
 
     public void submit(){
