@@ -1,10 +1,11 @@
-package com.accelerator.spring.automationaccelerator;
+package com.accelerator.spring.automationaccelerator.visa;
 
 import com.accelerator.spring.automationaccelerator.SpringBaseTestNGTest;
 import com.accelerator.spring.automationaccelerator.entity.User;
 import com.accelerator.spring.automationaccelerator.page.visa.VisaRegistrationPage;
 import com.accelerator.spring.automationaccelerator.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -40,8 +41,10 @@ public class UserVisaTest extends SpringBaseTestNGTest {
     }
 
     @DataProvider
-    public Object[] getData(){
-        return this.repository.findByDobBetween(Date.valueOf("1995-01-01"),Date.valueOf("1999-01-01"))
+    public Object[] getData(ITestContext context){
+        return this.repository.findByDobBetween(
+                Date.valueOf(context.getCurrentXmlTest().getParameter("dobFrom")),
+                Date.valueOf(context.getCurrentXmlTest().getParameter("dobTo")))
                 .stream()
                 .limit(3)
                 .toArray();
