@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
         strict = true,
         features = "classpath:features",
         glue = "com.accelerator.spring.automationaccelerator.stepdefs",
-        tags = {"not @smoke"},
+        tags = {"@smoke"},
         plugin = {
                 "pretty",
                 "html:D:\\MT-Accelerator\\temp\\"
