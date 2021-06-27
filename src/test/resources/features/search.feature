@@ -1,6 +1,6 @@
 Feature: Google search
 
-  @regression
+  @google
   Scenario Outline: I want to search on google site
     Given I am on the google site
     When I enter "spring" as a keyword
