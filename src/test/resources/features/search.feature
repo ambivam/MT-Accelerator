@@ -1,8 +1,9 @@
 Feature: Google search
 
+  @regression
   Scenario Outline: I want to search on google site
     Given I am on the google site
-    When I enter <spring> as a keyword
+    When I enter "spring" as a keyword
     Then I should see search results page
     Then I should see at least <count> results
 

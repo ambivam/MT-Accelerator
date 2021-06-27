@@ -5,8 +5,10 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
+        strict = true,
         features = "classpath:features",
         glue = "com.accelerator.spring.automationaccelerator.stepdefs",
+        tags = {"not @smoke"},
         plugin = {
                 "pretty",
                 "html:D:\\MT-Accelerator\\temp\\"
