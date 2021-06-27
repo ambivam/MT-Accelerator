@@ -13,7 +13,6 @@ import org.testng.annotations.DataProvider;
         }
 )
 
-
 public class CucumberRunner extends AbstractTestNGCucumberTests {
 
         @Override
